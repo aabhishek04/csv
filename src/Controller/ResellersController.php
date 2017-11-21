@@ -129,5 +129,18 @@ class ResellersController extends AppController
            exit;
         
     }
+    public function mail(){
+        
+        
+        $email = new Email();  
+//        $email->attachments('');
+        $email->from('aabhishek04@gmail.com')
+              ->to('abhisheks@maitkon.com')
+              ->subject('About')
+              ->send();
+        exit;
+
+        
+    }
     
 }
