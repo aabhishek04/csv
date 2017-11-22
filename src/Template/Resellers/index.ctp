@@ -1,13 +1,22 @@
 
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+        <li><?= __('Actions') ?></li>
+        <p></p>
         <!--<li><?= $this->Html->link(__('New Reseller'), ['action' => 'add']) ?></li>-->
+        <p></p>
         <li><?= $this->Html->link(__('New PDF'), ['action' => 'pdf']) ?></li>
-        <li>-------</li>
+        <p></p>
         <li><?= $this->Html->link(__('Mail'), ['action' => 'mail']) ?></li>
+        <p></p>
+        <li><?= $this->Html->link(__('Browse_Cap'), ['action' => 'browsCap']) ?></li>
+        
     </ul>
 </nav>
+
+
+
+
 <!--<div class="resellers index large-9 medium-8 columns content">
     <h3><?= __('Resellers') ?></h3>
     <table cellpadding="0" cellspacing="0">

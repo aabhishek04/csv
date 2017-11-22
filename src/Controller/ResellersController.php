@@ -3,6 +3,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Mpdf;
+use BrowscapPHP\Browscap;
+;
 use Cake\Mailer\Email;
 /**
  * Resellers Controller
@@ -21,6 +23,8 @@ class ResellersController extends AppController
      */
     public function index()
     {
+//       
+        
         $resellers = $this->paginate($this->Resellers);
 
         $this->set(compact('resellers'));
@@ -124,7 +128,8 @@ class ResellersController extends AppController
            $email->from('aabhishek04@gmail.com')
               ->to('abhisheks@maitkon.com')
               ->subject('About')
-//              ->attachments('')
+//              ->attachments($pdf)
+//              ->attachments('/var/www/html/sampleCSV/src/Template/Resellers/index.ctp') 
               ->send();
            exit;
         
@@ -133,13 +138,20 @@ class ResellersController extends AppController
         
         
         $email = new Email();  
-//        $email->attachments('');
         $email->from('aabhishek04@gmail.com')
               ->to('abhisheks@maitkon.com')
               ->subject('About')
               ->send();
         exit;
 
+        
+    }
+    public function browsCap(){
+        
+        $browscap = new \BrowscapPHP\Browscap();
+        $tt = $browscap->getBrowser();
+//        $tt=$this->request->env('HTTP_USER_AGENT');
+         $this->set(compact('tt'));
         
     }
     

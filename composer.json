@@ -16,7 +16,9 @@
         "knplabs/knp-snappy": "^1.0",
         "setasign/fpdf": "^1.8",
         "tecnickcom/tcpdf": "^6.2",
-        "mpdf/mpdf": "^7.0"
+        "mpdf/mpdf": "^7.0",
+        "crossjoin/browscap": "~3.0.0",
+        "browscap/browscap-php": "^3.1"
     },
     "require-dev": {
         "psy/psysh": "@stable",
