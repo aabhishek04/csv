@@ -245,6 +245,14 @@ class ApplicantsController extends AppController {
 
                     } 
         }
+        
+        public function imageUpload(){
+            
+            $this->image= TableRegistry::get('Users');
+            if ($this->request->is('post')) {
+                pr($this->request->data);
+            }
+        }
 }
 
 

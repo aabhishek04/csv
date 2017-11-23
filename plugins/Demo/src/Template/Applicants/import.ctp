@@ -1,15 +1,3 @@
-<!--<div class="col-md-8">
-        <?php // echo $this->Form->create('null',['url' => ['controller'=>'Applicants','action' => 'import'],'class'=>'form-inline','role'=>'form','method'=>'post','id'=>'csvForm', 'enctype'=>'multipart/form-data']) ?>
-       <?= $this->Form->create(NULL, ['url' => ['controller' => 'Applicants', 'action' => 'import', 'method' => 'post'],'id' => 'csvForm', 'novalidate' => 'novalidate','enctype'=>'multipart/form-data']) ?> 
-    <div class="form-group">
-        
-            <label class="sr-only" for="csv"> CSV </label>
-            <?php echo $this->Form->hidden('', ['type' => 'text','name'=>'userId','value'=>'1',]); ?>
-            <?php echo $this->Form->input('', ['type'=>'file','class' => 'form-control','name'=>'csv_file','id'=>'csv_file',  'label' => false,'placeholder' => 'csv upload',]); ?>
-        </div>
-        <button type="submit" class="btn btn-default " id="csvBtn"> Upload </button>
-    <?= $this->Form->end() ?>
-</div>-->
 <?php if(isset($paswd)&& $paswd!=''){
      $paswd=$paswd;
      }else
